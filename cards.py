@@ -40,17 +40,7 @@ class Card(object):
         # else suit not a string, keep the default suit of ''
 
     def has_same_color(self, other):
-        s1 = self.get_suit()
-        s2 = other.get_suit()
-        if(s1 == 'D' or s1 == 'H'):
-            s1 = 0
-        else:
-            s1 = 1
-        if(s2 == 'D' or s2 == 'H'):
-            s2 = 0
-        else:
-            s2 = 1
-        return s1 == s2
+        return self.get_color() == other.get_color()
 
     def set_hidden(self, val=True):
         """Set the card's hidden value, default True"""
@@ -79,6 +69,13 @@ class Card(object):
     def get_suit(self):
         """Return suit of the card as string: H,S,D,C"""
         return self.__suit
+
+    def get_color(self):
+        """Return color of the card"""
+        if self.__suit == 'D' or self.__suit == 'H':
+            return 'red'
+        else:
+            return 'black'
 
     def get_value(self):
         """Get the value on the face card:
