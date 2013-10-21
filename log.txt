@@ -1,6 +1,6 @@
  
 ==================================== 
-Sun 10/20/2013 22:54:44.69 
+Mon 10/21/2013 19:42:38.54 
 ==================================== 
  
 Let's play solitaire
@@ -11,44 +11,19 @@ Foundation top cards:
 	Empty, Empty, Empty, Empty
 
 Tableau Cards:
-	 3D, XX, XX
-	 3C, XX, XX
-	10S, XX, XX
-	10H, XX, XX
+	 JD, XX, XX
+	 AS, XX, XX
+	 KH, XX, XX
+	 8C, XX, XX
+	 9H, XX, XX
 	 QH, XX, XX
-	 JC, XX, XX
-	 JH, XX, XX
+	 AC, XX, XX
 
-===============
-  DEV Display
-===============
+Deal:		 '-d'
+Tableau:	 '-t'
+Quit:		 '-q'
 
-
-Stock: 
- XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX 
- XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX 
- XX  XX  XX  XX  XX  
-
-Tableau:
-3D  XX  XX
-3C  XX  XX
-10S  XX  XX
-10H  XX  XX
-QH  XX  XX
-JC  XX  XX
-JH  XX  XX
-
-Foundation:
-
-
-
-
-
-===================
-  END DEV Display
-===================
-
-
+Enter Command: 
 Stock Deals
 
 Stock contains 24 cards.
@@ -57,43 +32,28 @@ Foundation top cards:
 	Empty, Empty, Empty, Empty
 
 Tableau Cards:
-	10D,  3D, XX, XX
-	 AC,  3C, XX, XX
-	 2S, 10S, XX, XX
-	 4H, 10H, XX, XX
-	 2D,  QH, XX, XX
-	 5S,  JC, XX, XX
-	 QD,  JH, XX, XX
+	 2C,  JD, XX, XX
+	 JH,  AS, XX, XX
+	 4D,  KH, XX, XX
+	 9S,  8C, XX, XX
+	 KS,  9H, XX, XX
+	 AH,  QH, XX, XX
+	 6S,  AC, XX, XX
 
-===============
-  DEV Display
-===============
+Deal:		 '-d'
+Tableau:	 '-t'
+Quit:		 '-q'
 
+Enter Command: 
+Move to Foundation:		 '-f'
+Move Within Tableau:		 '-t'
 
-Stock: 
- XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX 
- XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  
+Enter Command: 
+Deal:		 '-d'
+Tableau:	 '-t'
+Quit:		 '-q'
 
-Tableau:
-10D  3D  XX  XX
-AC  3C  XX  XX
-2S 10S  XX  XX
-4H 10H  XX  XX
-2D  QH  XX  XX
-5S  JC  XX  XX
-QD  JH  XX  XX
-
-Foundation:
-
-
-
-
-
-===================
-  END DEV Display
-===================
-
-
+Enter Command: 
 Stock Deals
 
 Stock contains 17 cards.
@@ -102,170 +62,16 @@ Foundation top cards:
 	Empty, Empty, Empty, Empty
 
 Tableau Cards:
-	 7C, 10D,  3D, XX, XX
-	 9D,  AC,  3C, XX, XX
-	 JS,  2S, 10S, XX, XX
-	 3H,  4H, 10H, XX, XX
-	 3S,  2D,  QH, XX, XX
-	 8S,  5S,  JC, XX, XX
-	 AH,  QD,  JH, XX, XX
+	 7S,  2C,  JD, XX, XX
+	 7H,  JH,  AS, XX, XX
+	 7C,  4D,  KH, XX, XX
+	 4H,  9S,  8C, XX, XX
+	 5H,  KS,  9H, XX, XX
+	 6C,  AH,  QH, XX, XX
+	 QC,  6S,  AC, XX, XX
 
-===============
-  DEV Display
-===============
+Deal:		 '-d'
+Tableau:	 '-t'
+Quit:		 '-q'
 
-
-Stock: 
- XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX 
- XX  XX  XX  XX  
-
-Tableau:
-7C 10D  3D  XX  XX
-9D  AC  3C  XX  XX
-JS  2S 10S  XX  XX
-3H  4H 10H  XX  XX
-3S  2D  QH  XX  XX
-8S  5S  JC  XX  XX
-AH  QD  JH  XX  XX
-
-Foundation:
-
-
-
-
-
-===================
-  END DEV Display
-===================
-
-
-Stock Deals
-
-Stock contains 10 cards.
-
-Foundation top cards:
-	Empty, Empty, Empty, Empty
-
-Tableau Cards:
-	 AD,  7C, 10D,  3D, XX, XX
-	 AS,  9D,  AC,  3C, XX, XX
-	 7H,  JS,  2S, 10S, XX, XX
-	 9S,  3H,  4H, 10H, XX, XX
-	 8C,  3S,  2D,  QH, XX, XX
-	 9H,  8S,  5S,  JC, XX, XX
-	 6H,  AH,  QD,  JH, XX, XX
-
-===============
-  DEV Display
-===============
-
-
-Stock: 
- XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  
-
-Tableau:
-AD  7C 10D  3D  XX  XX
-AS  9D  AC  3C  XX  XX
-7H  JS  2S 10S  XX  XX
-9S  3H  4H 10H  XX  XX
-8C  3S  2D  QH  XX  XX
-9H  8S  5S  JC  XX  XX
-6H  AH  QD  JH  XX  XX
-
-Foundation:
-
-
-
-
-
-===================
-  END DEV Display
-===================
-
-
-Stock Deals
-
-Stock contains 3 cards.
-
-Foundation top cards:
-	Empty, Empty, Empty, Empty
-
-Tableau Cards:
-	 JD,  AD,  7C, 10D,  3D, XX, XX
-	 5H,  AS,  9D,  AC,  3C, XX, XX
-	 KH,  7H,  JS,  2S, 10S, XX, XX
-	 6C,  9S,  3H,  4H, 10H, XX, XX
-	 4D,  8C,  3S,  2D,  QH, XX, XX
-	 9C,  9H,  8S,  5S,  JC, XX, XX
-	 4S,  6H,  AH,  QD,  JH, XX, XX
-
-===============
-  DEV Display
-===============
-
-
-Stock: 
- XX  XX  XX  
-
-Tableau:
-JD  AD  7C 10D  3D  XX  XX
-5H  AS  9D  AC  3C  XX  XX
-KH  7H  JS  2S 10S  XX  XX
-6C  9S  3H  4H 10H  XX  XX
-4D  8C  3S  2D  QH  XX  XX
-9C  9H  8S  5S  JC  XX  XX
-4S  6H  AH  QD  JH  XX  XX
-
-Foundation:
-
-
-
-
-
-===================
-  END DEV Display
-===================
-
-
-Stock Deals
-
-Stock contains 0 cards.
-
-Foundation top cards:
-	Empty, Empty, Empty, Empty
-
-Tableau Cards:
-	 6D,  JD,  AD,  7C, 10D,  3D, XX, XX
-	 QS,  5H,  AS,  9D,  AC,  3C, XX, XX
-	 7D,  KH,  7H,  JS,  2S, 10S, XX, XX
-	 6C,  9S,  3H,  4H, 10H, XX, XX
-	 4D,  8C,  3S,  2D,  QH, XX, XX
-	 9C,  9H,  8S,  5S,  JC, XX, XX
-	 4S,  6H,  AH,  QD,  JH, XX, XX
-
-===============
-  DEV Display
-===============
-
-
-Stock:  
-
-Tableau:
-6D  JD  AD  7C 10D  3D  XX  XX
-QS  5H  AS  9D  AC  3C  XX  XX
-7D  KH  7H  JS  2S 10S  XX  XX
-6C  9S  3H  4H 10H  XX  XX
-4D  8C  3S  2D  QH  XX  XX
-9C  9H  8S  5S  JC  XX  XX
-4S  6H  AH  QD  JH  XX  XX
-
-Foundation:
-
-
-
-
-
-===================
-  END DEV Display
-===================
-
+Enter Command: 

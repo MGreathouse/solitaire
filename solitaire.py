@@ -67,16 +67,28 @@ def main():
 
     #show start
     displayStatus(stock, tableau, foundation)
-    #force deal
-    stock, tableau = dealStock(stock, tableau, foundation)
-    #force deal
-    stock, tableau = dealStock(stock, tableau, foundation)
-    #force deal
-    stock, tableau = dealStock(stock, tableau, foundation)
-    #force deal
-    stock, tableau = dealStock(stock, tableau, foundation)
-    #force deal
-    stock, tableau = dealStock(stock, tableau, foundation)
+
+    # loop to get and enact user input
+    running = True
+    while running:
+        # give directions
+        print('\nDeal:\t\t \'-d\'')
+        print('Tableau:\t \'-t\'')
+        print('Quit:\t\t \'-q\'\n')
+        
+        # get user input
+        usrCmnd = input('Enter Command: ')
+        if usrCmnd == '-d':
+            dealStock(stock, tableau, foundation)
+        elif usrCmnd == '-t':
+            # give directions
+            print('\nMove to Foundation:\t\t \'-f\'')
+            print('Move Within Tableau:\t\t \'-t\'\n')
+
+            # get user input
+            usrCmnd = input('Enter Command: ')
+        else:
+            running = False
 
 
 if __name__ == '__main__':
