@@ -12,23 +12,37 @@ def dealStock(stock, tableau, foundation):
             stack.top().show_card()  # makes the newly dealt card visible
 
     # show results of deal
-    # displayStatus()  # will call as of yet undefined function to display player visible status
-    tempStats(stock, tableau, foundation)  # temporary display of everything
+    displayStatus(stock, tableau, foundation)
 
     return(stock, tableau)
 
 
-#development function to show everything
-def tempStats(stock, tableau, foundation):
-    print('\nStock:', stock, '\n\nTableau:')
-    for stack in tableau:
-        print(str(stack).strip())
-    print('\nFoundation:')
-    for stack in foundation:
-        print(str(stack).strip())
-
-
 # shows status
+def displayStatus(stock, tableau, foundation):
+    # display number of cards in the stock
+    print('\nStock contains {0} cards.'.format(str(stock.cards_left())))
+
+    # display top cards in foundation
+    dispTxt = '\nFoundation top cards:\n\t'
+    for stack in foundation:
+        if not stack.empty():
+            dispTxt += str(stack.top()) + ', '
+        else:
+            dispTxt += 'Empty, '
+    print(dispTxt[0:-2])  # the slicing knocks off the last comma and space
+
+    # display the cards in each stack in the tableau
+    dispTxt = '\nTableau Cards:'
+    for stack in tableau:
+        dispTxt += '\n\t'
+        for i in range(stack.cards_left()):
+            if stack.top().get_hidden():
+                dispTxt += 'XX, '
+            else:
+                dispTxt += str(stack.top()) + ', '
+            stack.add_card_bottom(stack.deal())  # deal to bottom so when done the top card is top again
+        dispTxt = dispTxt[0:-2]  # the slicing knocks off the last comma and space
+    print(dispTxt)
 
 
 # main function
@@ -52,7 +66,7 @@ def main():
         stack.top().show_card()  # makes the last card dealt visible
 
     #show start
-    tempStats(stock, tableau, foundation)
+    displayStatus(stock, tableau, foundation)
     #force deal
     stock, tableau = dealStock(stock, tableau, foundation)
     #force deal

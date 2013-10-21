@@ -1,28 +1,42 @@
  
 ==================================== 
-Sun 10/20/2013 22:17:34.78 
+Sun 10/20/2013 22:54:44.69 
 ==================================== 
  
 Let's play solitaire
 
+Stock contains 31 cards.
+
+Foundation top cards:
+	Empty, Empty, Empty, Empty
+
+Tableau Cards:
+	 3D, XX, XX
+	 3C, XX, XX
+	10S, XX, XX
+	10H, XX, XX
+	 QH, XX, XX
+	 JC, XX, XX
+	 JH, XX, XX
+
 ===============
-++DEVELOPMENT++
+  DEV Display
 ===============
 
 
 Stock: 
- 7C  JS  9C  JD  3C  QS  2D  6H  8H  4D  QH  4C  7H 
- 6C 10D  5H  3D  JH  AC  KS  QC  2C  5S 10C  9D  JC 
-10S  QD  8C  AH  AD  
+ XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX 
+ XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX 
+ XX  XX  XX  XX  XX  
 
 Tableau:
-7D  8S  6D
-4S  3S  KH
-8D  KC  7S
-AS 10H  9S
-5D  9H  3H
-4H  6S  KD
-5C  2S  2H
+3D  XX  XX
+3C  XX  XX
+10S  XX  XX
+10H  XX  XX
+QH  XX  XX
+JC  XX  XX
+JH  XX  XX
 
 Foundation:
 
@@ -30,30 +44,44 @@ Foundation:
 
 
 
-===============
---DEVELOPMENT--
-===============
+===================
+  END DEV Display
+===================
 
 
 Stock Deals
 
+Stock contains 24 cards.
+
+Foundation top cards:
+	Empty, Empty, Empty, Empty
+
+Tableau Cards:
+	10D,  3D, XX, XX
+	 AC,  3C, XX, XX
+	 2S, 10S, XX, XX
+	 4H, 10H, XX, XX
+	 2D,  QH, XX, XX
+	 5S,  JC, XX, XX
+	 QD,  JH, XX, XX
+
 ===============
-++DEVELOPMENT++
+  DEV Display
 ===============
 
 
 Stock: 
- 6H  8H  4D  QH  4C  7H  6C 10D  5H  3D  JH  AC  KS 
- QC  2C  5S 10C  9D  JC 10S  QD  8C  AH  AD  
+ XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX 
+ XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  
 
 Tableau:
-7C  7D  8S  6D
-JS  4S  3S  KH
-9C  8D  KC  7S
-JD  AS 10H  9S
-3C  5D  9H  3H
-QS  4H  6S  KD
-2D  5C  2S  2H
+10D  3D  XX  XX
+AC  3C  XX  XX
+2S 10S  XX  XX
+4H 10H  XX  XX
+2D  QH  XX  XX
+5S  JC  XX  XX
+QD  JH  XX  XX
 
 Foundation:
 
@@ -61,30 +89,44 @@ Foundation:
 
 
 
-===============
---DEVELOPMENT--
-===============
+===================
+  END DEV Display
+===================
 
 
 Stock Deals
 
+Stock contains 17 cards.
+
+Foundation top cards:
+	Empty, Empty, Empty, Empty
+
+Tableau Cards:
+	 7C, 10D,  3D, XX, XX
+	 9D,  AC,  3C, XX, XX
+	 JS,  2S, 10S, XX, XX
+	 3H,  4H, 10H, XX, XX
+	 3S,  2D,  QH, XX, XX
+	 8S,  5S,  JC, XX, XX
+	 AH,  QD,  JH, XX, XX
+
 ===============
-++DEVELOPMENT++
+  DEV Display
 ===============
 
 
 Stock: 
-10D  5H  3D  JH  AC  KS  QC  2C  5S 10C  9D  JC 10S 
- QD  8C  AH  AD  
+ XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  XX 
+ XX  XX  XX  XX  
 
 Tableau:
-6H  7C  7D  8S  6D
-8H  JS  4S  3S  KH
-4D  9C  8D  KC  7S
-QH  JD  AS 10H  9S
-4C  3C  5D  9H  3H
-7H  QS  4H  6S  KD
-6C  2D  5C  2S  2H
+7C 10D  3D  XX  XX
+9D  AC  3C  XX  XX
+JS  2S 10S  XX  XX
+3H  4H 10H  XX  XX
+3S  2D  QH  XX  XX
+8S  5S  JC  XX  XX
+AH  QD  JH  XX  XX
 
 Foundation:
 
@@ -92,29 +134,43 @@ Foundation:
 
 
 
-===============
---DEVELOPMENT--
-===============
+===================
+  END DEV Display
+===================
 
 
 Stock Deals
 
+Stock contains 10 cards.
+
+Foundation top cards:
+	Empty, Empty, Empty, Empty
+
+Tableau Cards:
+	 AD,  7C, 10D,  3D, XX, XX
+	 AS,  9D,  AC,  3C, XX, XX
+	 7H,  JS,  2S, 10S, XX, XX
+	 9S,  3H,  4H, 10H, XX, XX
+	 8C,  3S,  2D,  QH, XX, XX
+	 9H,  8S,  5S,  JC, XX, XX
+	 6H,  AH,  QD,  JH, XX, XX
+
 ===============
-++DEVELOPMENT++
+  DEV Display
 ===============
 
 
 Stock: 
- 2C  5S 10C  9D  JC 10S  QD  8C  AH  AD  
+ XX  XX  XX  XX  XX  XX  XX  XX  XX  XX  
 
 Tableau:
-10D  6H  7C  7D  8S  6D
-5H  8H  JS  4S  3S  KH
-3D  4D  9C  8D  KC  7S
-JH  QH  JD  AS 10H  9S
-AC  4C  3C  5D  9H  3H
-KS  7H  QS  4H  6S  KD
-QC  6C  2D  5C  2S  2H
+AD  7C 10D  3D  XX  XX
+AS  9D  AC  3C  XX  XX
+7H  JS  2S 10S  XX  XX
+9S  3H  4H 10H  XX  XX
+8C  3S  2D  QH  XX  XX
+9H  8S  5S  JC  XX  XX
+6H  AH  QD  JH  XX  XX
 
 Foundation:
 
@@ -122,29 +178,43 @@ Foundation:
 
 
 
-===============
---DEVELOPMENT--
-===============
+===================
+  END DEV Display
+===================
 
 
 Stock Deals
 
+Stock contains 3 cards.
+
+Foundation top cards:
+	Empty, Empty, Empty, Empty
+
+Tableau Cards:
+	 JD,  AD,  7C, 10D,  3D, XX, XX
+	 5H,  AS,  9D,  AC,  3C, XX, XX
+	 KH,  7H,  JS,  2S, 10S, XX, XX
+	 6C,  9S,  3H,  4H, 10H, XX, XX
+	 4D,  8C,  3S,  2D,  QH, XX, XX
+	 9C,  9H,  8S,  5S,  JC, XX, XX
+	 4S,  6H,  AH,  QD,  JH, XX, XX
+
 ===============
-++DEVELOPMENT++
+  DEV Display
 ===============
 
 
 Stock: 
- 8C  AH  AD  
+ XX  XX  XX  
 
 Tableau:
-2C 10D  6H  7C  7D  8S  6D
-5S  5H  8H  JS  4S  3S  KH
-10C  3D  4D  9C  8D  KC  7S
-9D  JH  QH  JD  AS 10H  9S
-JC  AC  4C  3C  5D  9H  3H
-10S  KS  7H  QS  4H  6S  KD
-QD  QC  6C  2D  5C  2S  2H
+JD  AD  7C 10D  3D  XX  XX
+5H  AS  9D  AC  3C  XX  XX
+KH  7H  JS  2S 10S  XX  XX
+6C  9S  3H  4H 10H  XX  XX
+4D  8C  3S  2D  QH  XX  XX
+9C  9H  8S  5S  JC  XX  XX
+4S  6H  AH  QD  JH  XX  XX
 
 Foundation:
 
@@ -152,28 +222,42 @@ Foundation:
 
 
 
-===============
---DEVELOPMENT--
-===============
+===================
+  END DEV Display
+===================
 
 
 Stock Deals
 
+Stock contains 0 cards.
+
+Foundation top cards:
+	Empty, Empty, Empty, Empty
+
+Tableau Cards:
+	 6D,  JD,  AD,  7C, 10D,  3D, XX, XX
+	 QS,  5H,  AS,  9D,  AC,  3C, XX, XX
+	 7D,  KH,  7H,  JS,  2S, 10S, XX, XX
+	 6C,  9S,  3H,  4H, 10H, XX, XX
+	 4D,  8C,  3S,  2D,  QH, XX, XX
+	 9C,  9H,  8S,  5S,  JC, XX, XX
+	 4S,  6H,  AH,  QD,  JH, XX, XX
+
 ===============
-++DEVELOPMENT++
+  DEV Display
 ===============
 
 
 Stock:  
 
 Tableau:
-8C  2C 10D  6H  7C  7D  8S  6D
-AH  5S  5H  8H  JS  4S  3S  KH
-AD 10C  3D  4D  9C  8D  KC  7S
-9D  JH  QH  JD  AS 10H  9S
-JC  AC  4C  3C  5D  9H  3H
-10S  KS  7H  QS  4H  6S  KD
-QD  QC  6C  2D  5C  2S  2H
+6D  JD  AD  7C 10D  3D  XX  XX
+QS  5H  AS  9D  AC  3C  XX  XX
+7D  KH  7H  JS  2S 10S  XX  XX
+6C  9S  3H  4H 10H  XX  XX
+4D  8C  3S  2D  QH  XX  XX
+9C  9H  8S  5S  JC  XX  XX
+4S  6H  AH  QD  JH  XX  XX
 
 Foundation:
 
@@ -181,145 +265,7 @@ Foundation:
 
 
 
-===============
---DEVELOPMENT--
-===============
-
-         3216 function calls (3175 primitive calls) in 0.007 seconds
-
-   Ordered by: call count
-
-   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
-      312    0.000    0.000    0.001    0.000 cards.py:90(__str__)
-      312    0.000    0.000    0.000    0.000 {method 'split' of 'str' objects}
-      312    0.000    0.000    0.000    0.000 {method 'rjust' of 'str' objects}
-      216    0.000    0.000    0.000    0.000 cp1252.py:18(encode)
-      216    0.000    0.000    0.000    0.000 {built-in method charmap_encode}
-      192    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
-      132    0.000    0.000    0.000    0.000 {built-in method len}
-       96    0.000    0.000    0.001    0.000 {built-in method print}
-       76    0.000    0.000    0.000    0.000 {method 'getrandbits' of '_random.Random' objects}
-       72    0.001    0.000    0.001    0.000 cards.py:162(__str__)
-       66    0.000    0.000    0.000    0.000 {method 'strip' of 'str' objects}
-       52    0.000    0.000    0.000    0.000 {method 'pop' of 'list' objects}
-       52    0.000    0.000    0.000    0.000 cards.py:121(deal)
-       52    0.000    0.000    0.000    0.000 cards.py:10(__init__)
-       52    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:486(_verbose_message)
-       52    0.000    0.000    0.000    0.000 cards.py:146(add_card_top)
-       51    0.000    0.000    0.000    0.000 random.py:216(_randbelow)
-       51    0.000    0.000    0.000    0.000 {method 'bit_length' of 'int' objects}
-       51    0.000    0.000    0.000    0.000 {method 'join' of 'str' objects}
-       46    0.000    0.000    0.000    0.000 {method 'rpartition' of 'str' objects}
-       45    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:74(_path_join)
-       43    0.000    0.000    0.000    0.000 {method 'format' of 'str' objects}
-       38    0.000    0.000    0.000    0.000 cards.py:132(top)
-       38    0.000    0.000    0.000    0.000 cards.py:62(show_card)
-       35    0.000    0.000    0.000    0.000 cards.py:158(empty)
-       31    0.000    0.000    0.000    0.000 {built-in method hasattr}
-       24    0.000    0.000    0.000    0.000 {built-in method release_lock}
-       19    0.001    0.000    0.001    0.000 {built-in method stat}
-       19    0.000    0.000    0.000    0.000 {built-in method isinstance}
-       18    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1455(__enter__)
-       18    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1459(__exit__)
-       18    0.000    0.000    0.000    0.000 {built-in method acquire_lock}
-     16/1    0.000    0.000    0.004    0.004 <frozen importlib._bootstrap>:581(_check_name_wrapper)
-       15    0.000    0.000    0.000    0.000 {built-in method getattr}
-       15    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1261(_path_importer_cache)
-       13    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:86(_path_split)
-       12    0.000    0.000    0.000    0.000 cards.py:110(__init__)
-       12    0.000    0.000    0.000    0.000 {built-in method get_ident}
-       12    0.000    0.000    0.000    0.000 {built-in method allocate_lock}
-       12    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:34(_relax_case)
-       12    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap>:1352(find_loader)
-       12    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1026(get_filename)
-        8    0.000    0.000    0.000    0.000 {method 'extend' of 'list' objects}
-        8    0.000    0.000    0.000    0.000 {built-in method OpenKey}
-        7    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1596(_handle_fromlist)
-        6    0.000    0.000    0.000    0.000 {built-in method globals}
-        6    0.000    0.000    0.000    0.000 {method 'partition' of 'str' objects}
-        6    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:415(cache_from_source)
-      6/1    0.000    0.000    0.004    0.004 <frozen importlib._bootstrap>:1509(_find_and_load_unlocked)
-        6    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:266(_get_module_lock)
-      6/1    0.000    0.000    0.004    0.004 <frozen importlib._bootstrap>:1559(_find_and_load)
-        6    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:796(is_package)
-      6/1    0.000    0.000    0.003    0.003 <frozen importlib._bootstrap>:305(_call_with_frames_removed)
-        6    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:226(release)
-        6    0.000    0.000    0.000    0.000 hashlib.py:94(__get_openssl_constructor)
-        6    0.000    0.000    0.000    0.000 {method 'rsplit' of 'str' objects}
-        6    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:61(_r_long)
-        6    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:643(find_module)
-        6    0.000    0.000    0.000    0.000 {built-in method is_builtin}
-        6    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap>:1473(_find_module)
-        6    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:201(acquire)
-        6    0.000    0.000    0.002    0.000 solitaire.py:22(tempStats)
-        6    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:181(__init__)
-        6    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:280(cb)
-        5    0.000    0.000    0.002    0.000 solitaire.py:5(dealStock)
-        4    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:108(_path_isfile)
-        4    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap>:1278(_get_loader)
-        4    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:754(_open_registry)
-        4    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:700(find_module)
-        4    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap>:1305(find_module)
-        4    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:98(_path_is_mode_type)
-        4    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:776(find_module)
-        4    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:761(_search_registry)
-      4/1    0.000    0.000    0.007    0.007 {built-in method exec}
-        4    0.000    0.000    0.000    0.000 {built-in method is_frozen}
-        4    0.000    0.000    0.000    0.000 {built-in method __build_class__}
-        3    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap>:509(set_loader_wrapper)
-        3    0.000    0.000    0.000    0.000 {method 'read' of '_io.FileIO' objects}
-        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:154(new_module)
-        3    0.000    0.000    0.000    0.000 {built-in method loads}
-      3/1    0.000    0.000    0.004    0.004 <frozen importlib._bootstrap>:536(module_for_loader_wrapper)
-        3    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap>:496(set_package_wrapper)
-        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1031(get_data)
-        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1041(path_stats)
-        3    0.000    0.000    0.000    0.000 {built-in method _fix_co_filename}
-      3/1    0.000    0.000    0.004    0.004 <frozen importlib._bootstrap>:1019(load_module)
-        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:804(_bytes_from_bytecode)
-        3    0.000    0.000    0.001    0.000 <frozen importlib._bootstrap>:935(get_code)
-      3/1    0.000    0.000    0.004    0.004 <frozen importlib._bootstrap>:850(_load_module)
-        3    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1013(__init__)
-      3/1    0.000    0.000    0.004    0.004 <frozen importlib._bootstrap>:997(load_module)
-        3    0.000    0.000    0.000    0.000 {method 'get' of 'dict' objects}
-        2    0.000    0.000    0.000    0.000 {built-in method log}
-        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:654(load_module)
-        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1147(<genexpr>)
-        2    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:593(_requires_builtin_wrapper)
-        2    0.000    0.000    0.000    0.000 {built-in method init_builtin}
-        1    0.000    0.000    0.000    0.000 cards.py:4(Card)
-        1    0.000    0.000    0.000    0.000 {built-in method openssl_md5}
-        1    0.000    0.000    0.002    0.002 random.py:37(<module>)
-        1    0.000    0.000    0.000    0.000 {built-in method exp}
-        1    0.000    0.000    0.007    0.007 solitaire.py:1(<module>)
-        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1122(__init__)
-        1    0.000    0.000    0.000    0.000 random.py:84(__init__)
-        1    0.000    0.000    0.000    0.000 random.py:623(SystemRandom)
-        1    0.000    0.000    0.001    0.001 hashlib.py:53(<module>)
-        1    0.000    0.000    0.000    0.000 {built-in method from_bytes}
-        1    0.000    0.000    0.000    0.000 {built-in method openssl_sha512}
-        1    0.000    0.000    0.000    0.000 random.py:93(seed)
-        1    0.000    0.000    0.000    0.000 {built-in method openssl_sha256}
-        1    0.000    0.000    0.001    0.001 <frozen importlib._bootstrap>:1126(load_module)
-        1    0.000    0.000    0.000    0.000 {method 'union' of 'set' objects}
-        1    0.000    0.000    0.000    0.000 {built-in method urandom}
-        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
-        1    0.000    0.000    0.000    0.000 {built-in method openssl_sha384}
-        1    0.000    0.000    0.003    0.003 solitaire.py:40(main)
-        1    0.000    0.000    0.000    0.000 solitaire.py:48(<listcomp>)
-        1    0.000    0.000    0.000    0.000 random.py:68(Random)
-        1    0.000    0.000    0.000    0.000 <frozen importlib._bootstrap>:1144(is_package)
-        1    0.000    0.000    0.000    0.000 {built-in method any}
-        1    0.000    0.000    0.000    0.000 {built-in method sqrt}
-        1    0.000    0.000    0.000    0.000 {built-in method openssl_sha224}
-        1    0.000    0.000    0.003    0.003 cards.py:1(<module>)
-        1    0.000    0.000    0.000    0.000 cards.py:113(<listcomp>)
-        1    0.000    0.000    0.000    0.000 cards.py:117(shuffle)
-        1    0.000    0.000    0.000    0.000 {function Random.seed at 0x0000000002837D90}
-        1    0.000    0.000    0.000    0.000 random.py:254(shuffle)
-        1    0.000    0.000    0.000    0.000 {built-in method openssl_sha1}
-        1    0.001    0.001    0.001    0.001 {built-in method load_dynamic}
-        1    0.000    0.000    0.000    0.000 solitaire.py:51(<listcomp>)
-        1    0.000    0.000    0.000    0.000 cards.py:107(Deck)
-
+===================
+  END DEV Display
+===================
 
