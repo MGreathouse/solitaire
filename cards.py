@@ -10,7 +10,7 @@ class Card(object):
     def __init__(self, r=0, s=''):
         self.__rank = 0
         self.__suit = ''                 # create blank card by default unless we fix it later
-        self.__hidden = False
+        self.__hidden = True            # set to false since one should not know what a card by default
         if type(r) == str:
             if r in 'Jj':
                 self.__rank = 11  # Jack
