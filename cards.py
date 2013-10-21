@@ -6,7 +6,8 @@ class Card(object):
     # Protocol:
     #   1. 'no card' is represented by BOTH r = 0 and s = ''
     #   2. set_rank and set_suit should be commented out after development and debugging
-    #   3  rank is int: 1=Ace, 2-10 face value, 11=Jack, 12=Queen, 13=King
+    #   3. rank is int: 1=Ace, 2-10 face value, 11=Jack, 12=Queen, 13=King
+    #   4. suit is str: H=Hearts, S=Spades, D=Diamonds, C=Clubs
     def __init__(self, r=0, s=''):
         self.__rank = 0
         self.__suit = ''                 # create blank card by default unless we fix it later
@@ -18,23 +19,23 @@ class Card(object):
                 self.__rank = 12  # Queen
             elif r in 'Kk':
                 self.__rank = 13  # King
-            elif r in 'aA':
+            elif r in 'Aa':
                 self.__rank = 1   # Ace
             # else str rank not in the approved set, keep the default rank of 0
         elif type(r) == int:
-            if 1 <= r <= 14:
+            if 1 <= r <= 13:
                 self.__rank = r
-            # else int rank not between 1 and 14, keep the default rank of 0
+            # else int rank not between 1 and 13, keep the default rank of 0
         # else rank not a str or an int, keep the default rank of 0
         if type(s) == str and s:
-            if s in 'Cc':
-                self.__suit = 'C'
-            elif s in 'Hh':
+            if s in 'Hh':
                 self.__suit = 'H'
-            elif s in 'Dd':
-                self.__suit = 'D'
             elif s in 'Ss':
                 self.__suit = 'S'
+            elif s in 'Dd':
+                self.__suit = 'D'
+            elif s in 'Cc':
+                self.__suit = 'C'
             # else suit not in approved set, keep the default suit of ''
         # else suit not a string, keep the default suit of ''
 
@@ -68,7 +69,7 @@ class Card(object):
         self.__rank = r
 
     def set_suit(self, s):
-        """For Development and Debugging only: Set the suit of the card: C,S,D,H"""
+        """For Development and Debugging only: Set the suit of the card: H,S,D,C"""
         self.__suit = s
 
     def get_rank(self):
@@ -76,7 +77,7 @@ class Card(object):
         return self.__rank
 
     def get_suit(self):
-        """Return suit of the card as string: C,S,D,H"""
+        """Return suit of the card as string: H,S,D,C"""
         return self.__suit
 
     def get_value(self):
