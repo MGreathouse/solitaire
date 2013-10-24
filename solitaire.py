@@ -33,16 +33,117 @@ def displayStatus(stock, tableau, foundation):
 
     # display the cards in each stack in the tableau
     dispTxt = '\nTableau Cards:'
+
+    which = 1
     for stack in tableau:
-        dispTxt += '\n\t'
+        dispTxt += '\n{0}:)\t'.format(str(which))
         for i in range(stack.cards_left()):
             if stack.top().get_hidden():
-                dispTxt += 'XX, '
+                dispTxt += ' XX, '
             else:
                 dispTxt += str(stack.top()) + ', '
             stack.add_card_bottom(stack.deal())  # deal to bottom so when done the top card is top again
         dispTxt = dispTxt[0:-2]  # the slicing knocks off the last comma and space
+        # update the list slot for next item
+        which += 1
+
     print(dispTxt)
+
+
+# If able, move top card of stack to the foundation
+def moveFoundation(cardMoved, foundation):
+    # top values in foundation
+    foundationVals = []
+
+    # fill foundation values
+    for stack in foundation:
+        if stack.empty():
+            foundationVals.append('Empty')
+        else:
+            foundationVals.append(stack.top())
+    print('\nFoundation Values:\n',foundationVals,'\n')
+
+    # check if card is an ace
+    if cardMoved.get_rank() == 1:
+        # add to first empty slot in foundation
+        for i in range(4):
+            if foundationVals[i] == 'Empty':
+                foundation[i].add_card_top(cardMoved)
+                return(True, foundation)
+    else:
+        for i in range(4):
+            # rally long just to see if the suit is the same and is the next in sequence
+            if foundationVals[i] != 'Empty':
+                if cardMoved.get_rank() == foundation[i].top().get_rank() + 1 and cardMoved.has_same_suit(foundation[i].top()):
+                    foundation[i].add_card_top(cardMoved)
+                    return(True, foundation)
+                else:
+                    if i == 3:
+                        print('{0} cannot be moved to the foundation.'.format(str(cardMoved)))
+                        return(False, foundation)
+            elif i == 3:
+                print('{0} cannot be moved to the foundation.'.format(str(cardMoved)))
+                return(False, foundation)
+
+
+
+# finds how many cards can be moved, gets amount from user and then tries to move to designated spot
+
+
+# UI dialog instance
+def runUI(stock, tableau, foundation):
+    # give directions
+    print('\nCommands:\nDeal:\t\t \'-d\'')
+    print('Tableau:\t \'-t\'')
+    print('Quit:\t\t \'-q\'\n')
+    
+    # get user input
+    usrCmnd = input('Enter Command: ')
+
+    # check input
+    if usrCmnd == '-d':
+        dealStock(stock, tableau, foundation)
+    elif usrCmnd == '-t':
+        # give directions
+        print('\nMove to Foundation:\t\t \'-f\'')
+        print('Move Within Tableau:\t\t \'-t\'')
+        print('Quit:\t\t \'-q\'\n')
+
+        # get user input
+        usrCmnd = input('Enter Command: ')
+
+        # check input
+        if usrCmnd == '-f':
+            displayStatus(stock, tableau, foundation)
+            try:
+                fromStack = int(input('\nFrom stack: '))
+            except:
+                print('Invalid Number.')
+
+            # try to move it
+            moved, foundation = moveFoundation(tableau[fromStack - 1].top(), foundation)
+
+            if moved:
+                print('{} moved to foundation.'.format(tableau[fromStack - 1].deal()))
+                # auto flip the next card if face down
+                if tableau[fromStack - 1].top().get_hidden():
+                    tableau[fromStack - 1].top().show_card()
+
+            displayStatus(stock, tableau, foundation)
+        elif usrCmnd == '-t':
+            displayStatus(stock, tableau, foundation)
+            try:
+                fromStack = int(input('\nFrom stack: '))
+                toStack = int(input('To stack: '))
+            except:
+                print('Invalid Number.')
+        else:
+            return(False, stock, tableau, foundation)
+    else:
+        return(False, stock, tableau, foundation)
+
+    #if this gets triggered, the loop continues
+    return(True, stock, tableau, foundation)
 
 
 # main function
@@ -71,25 +172,10 @@ def main():
     # loop to get and enact user input
     running = True
     while running:
-        # give directions
-        print('\nDeal:\t\t \'-d\'')
-        print('Tableau:\t \'-t\'')
-        print('Quit:\t\t \'-q\'\n')
-        
-        # get user input
-        usrCmnd = input('Enter Command: ')
-        if usrCmnd == '-d':
-            dealStock(stock, tableau, foundation)
-        elif usrCmnd == '-t':
-            # give directions
-            print('\nMove to Foundation:\t\t \'-f\'')
-            print('Move Within Tableau:\t\t \'-t\'\n')
-
-            # get user input
-            usrCmnd = input('Enter Command: ')
-        else:
-            running = False
+        running, stock, tableau, foundation = runUI(stock, tableau, foundation)
 
 
 if __name__ == '__main__':
     main()
+else:
+    print('This file is not instantiated as a class.')

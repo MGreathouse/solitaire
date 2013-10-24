@@ -42,6 +42,9 @@ class Card(object):
     def has_same_color(self, other):
         return self.get_color() == other.get_color()
 
+    def has_same_suit(self, other):
+        return self.get_suit() == other.get_suit()
+
     def set_hidden(self, val=True):
         """Set the card's hidden value, default True"""
         self.__hidden = val
