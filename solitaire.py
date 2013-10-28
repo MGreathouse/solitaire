@@ -50,6 +50,15 @@ def displayStatus(stock, tableau, foundation):
     print(dispTxt)
 
 
+# checks to see if the next card in the sequence
+def checkNext(cardLow, cardHigh):
+    if cardLow.get_color() != cardHigh.get_color():
+        if cardLow.get_rank() + 1 == cardHigh.get_rank():
+            return True
+
+    return False
+
+
 # If able, move top card of stack to the foundation
 def moveFoundation(cardMoved, foundation):
     # top values in foundation
@@ -88,6 +97,65 @@ def moveFoundation(cardMoved, foundation):
 
 
 # finds how many cards can be moved, gets amount from user and then tries to move to designated spot
+def moveTableau(moveFrom, moveTo, tableau):
+    # make copies of the stack for easy of work
+    fromStack = tableau[moveFrom]
+    toStack = tableau[moveTo]
+
+    # get the card that will have cards moved onto it
+    receiver = toStack.top()
+
+    previous = None
+    for i in range(fromStack.cards_left()):
+        if previous == None:
+            if checkNext(fromStack.top(), receiver):
+                # good, move it
+                toStack.add_card_top(fromStack.deal())
+
+                # make sure there is a visible card
+                if not fromStack.empty():
+                    if fromStack.top().get_hidden():
+                        fromStack.top().set_hidden(False)
+
+                tableau[moveFrom] = fromStack
+                tableau[moveTo] = toStack
+                return(True, tableau)
+            else:
+                previous = fromStack.top()
+                fromStack.add_card_bottom(fromStack.deal())
+        else:
+            if checkNext(previous, fromStack.top()):
+                # check if the sequence ender
+                if checkNext(fromStack.top(), receiver):
+                    winner = fromStack.top()
+                    # move cards to the bottom until top card is the next in the sequence
+                    while fromStack.top() != winner:
+                        fromStack.add_card_bottom(fromStack.deal())
+
+                    # move that one to the bottom
+                    fromStack.add_card_bottom(fromStack.deal())
+
+                    # deal those cards over to the to stack
+                    for someVar in range(i):
+                        toStack.add_card_top(fromStack.dealBottom())
+
+                    # make sure there is a visible card
+                    if not fromStack.empty():
+                        if fromStack.top().get_hidden():
+                            fromStack.top().set_hidden(False)
+
+                    # return updates
+                    tableau[moveFrom] = fromStack
+                    tableau[moveTo] = toStack
+                    return(True, tableau)
+                else:
+                    print('\nInvalid Move.')
+                    return(false, tableau)
+
+                fromStack.add_card_bottom(fromStack.deal())
+            else:
+                print('\nInvalid Move.')
+                return(False, tableau)
 
 
 # UI dialog instance
@@ -118,7 +186,9 @@ def runUI(stock, tableau, foundation):
             try:
                 fromStack = int(input('\nFrom stack: '))
             except:
+                # bad entry - screw the user's choice and pop them out to the main menu
                 print('Invalid Number.')
+                return(False, stock, tableau, foundation)
 
             # try to move it
             moved, foundation = moveFoundation(tableau[fromStack - 1].top(), foundation)
@@ -126,8 +196,9 @@ def runUI(stock, tableau, foundation):
             if moved:
                 print('{} moved to foundation.'.format(tableau[fromStack - 1].deal()))
                 # auto flip the next card if face down
-                if tableau[fromStack - 1].top().get_hidden():
-                    tableau[fromStack - 1].top().show_card()
+                if not tableau[fromStack - 1].empty():
+                    if tableau[fromStack - 1].top().get_hidden():
+                        tableau[fromStack - 1].top().show_card()
 
             displayStatus(stock, tableau, foundation)
         elif usrCmnd == '-t':
@@ -136,7 +207,16 @@ def runUI(stock, tableau, foundation):
                 fromStack = int(input('\nFrom stack: '))
                 toStack = int(input('To stack: '))
             except:
+                # bad entry - screw the user's choice and pop them out to the main menu
                 print('Invalid Number.')
+                return(False, stock, tableau, foundation)
+
+            # try to move it (compensate for human friendly numbers)
+            moved, tableau = moveTableau(fromStack - 1, toStack - 1, tableau)
+
+            if moved:
+                print('\nCards Moved within tableau.')
+                displayStatus(stock, tableau, foundation)
         else:
             return(False, stock, tableau, foundation)
     else:

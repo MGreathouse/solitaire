@@ -126,6 +126,13 @@ class Deck(object):
         else:
             return self.__deck.pop(0)  # remove card (pop it) and then return it
 
+    def dealBottom(self):
+        """Deal a card by returning the card that is removed off the bottom of the deck"""
+        if len(self.__deck) == 0:  # deck is empty
+            return None
+        else:
+            return self.__deck.pop(-1)  # remove card (pop it) and then return it
+
     def discard(self, n):
         """Remove n cards from the top of the deck"""
         del self.__deck[:n]  # delete an n-card slice from the end of the deck list
