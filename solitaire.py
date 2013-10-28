@@ -44,13 +44,13 @@ def displayStatus(stock, tableau, foundation):
                 dispTxt += str(stack.top()) + ', '
             stack.add_card_bottom(stack.deal())  # deal to bottom so when done the top card is top again
 
-        # in case it is empty:
-        if stock.empty():
-            dispTxt += 'Empty'
-
         dispTxt = dispTxt[0:-2]  # the slicing knocks off the last comma and space
         # update the list slot for next item
         which += 1
+
+        # in case it is empty:
+        if stack.empty():
+            dispTxt += 'Empty'
 
     print(dispTxt)
 
@@ -131,11 +131,6 @@ def moveTableau(moveFrom, moveTo, tableau):
             if checkNext(previous, fromStack.top()):
                 # check if the sequence ender
                 if checkNext(fromStack.top(), receiver):
-                    winner = fromStack.top()
-                    # move cards to the bottom until top card is the next in the sequence
-                    while fromStack.top() != winner:
-                        fromStack.add_card_bottom(fromStack.deal())
-
                     # move that one to the bottom
                     fromStack.add_card_bottom(fromStack.deal())
 
@@ -154,10 +149,8 @@ def moveTableau(moveFrom, moveTo, tableau):
                     return(True, tableau)
                 fromStack.add_card_bottom(fromStack.deal())
             else:
-                # undo deck manipulations
-                for someNum in range(i - 1):
-                    fromStack.add_card_bottom(fromStack.dealBottom())
-
+                for someNum in range(i):
+                    fromStack.add_card_top(fromStack.dealBottom())
                 print('\nInvalid Move.')
                 return(False, tableau)
 
@@ -165,27 +158,27 @@ def moveTableau(moveFrom, moveTo, tableau):
 # UI dialog instance
 def runUI(stock, tableau, foundation):
     # give directions
-    print('\nCommands:\nDeal:\t\t \'-d\'')
-    print('Tableau:\t \'-t\'')
-    print('Quit:\t\t \'-q\'\n')
+    print('\nCommands:\nDeal:\t\t \'d\'')
+    print('Tableau:\t \'t\'')
+    print('Quit:\t\t \'q\'\n')
     
     # get user input
     usrCmnd = input('Enter Command: ')
 
     # check input
-    if usrCmnd == '-d':
+    if usrCmnd == 'd':
         dealStock(stock, tableau, foundation)
-    elif usrCmnd == '-t':
+    elif usrCmnd == 't':
         # give directions
-        print('\nMove to Foundation:\t\t \'-f\'')
-        print('Move Within Tableau:\t\t \'-t\'')
-        print('Quit:\t\t \'-q\'\n')
+        print('\nMove to Foundation:\t\t \'f\'')
+        print('Move Within Tableau:\t\t \'t\'')
+        print('Quit:\t\t \'q\'\n')
 
         # get user input
         usrCmnd = input('Enter Command: ')
 
         # check input
-        if usrCmnd == '-f':
+        if usrCmnd == 'f':
             displayStatus(stock, tableau, foundation)
             try:
                 fromStack = int(input('\nFrom stack: '))
@@ -205,7 +198,7 @@ def runUI(stock, tableau, foundation):
                         tableau[fromStack - 1].top().show_card()
 
             displayStatus(stock, tableau, foundation)
-        elif usrCmnd == '-t':
+        elif usrCmnd == 't':
             displayStatus(stock, tableau, foundation)
             try:
                 fromStack = int(input('\nFrom stack: '))
@@ -220,7 +213,8 @@ def runUI(stock, tableau, foundation):
 
             if moved:
                 print('\nCards Moved within tableau.')
-                displayStatus(stock, tableau, foundation)
+            
+            displayStatus(stock, tableau, foundation)
         else:
             return(False, stock, tableau, foundation)
     else:
