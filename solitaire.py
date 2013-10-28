@@ -43,6 +43,11 @@ def displayStatus(stock, tableau, foundation):
             else:
                 dispTxt += str(stack.top()) + ', '
             stack.add_card_bottom(stack.deal())  # deal to bottom so when done the top card is top again
+
+        # in case it is empty:
+        if stock.empty():
+            dispTxt += 'Empty'
+
         dispTxt = dispTxt[0:-2]  # the slicing knocks off the last comma and space
         # update the list slot for next item
         which += 1
@@ -55,7 +60,6 @@ def checkNext(cardLow, cardHigh):
     if cardLow.get_color() != cardHigh.get_color():
         if cardLow.get_rank() + 1 == cardHigh.get_rank():
             return True
-
     return False
 
 
@@ -136,7 +140,7 @@ def moveTableau(moveFrom, moveTo, tableau):
                     fromStack.add_card_bottom(fromStack.deal())
 
                     # deal those cards over to the to stack
-                    for someVar in range(i):
+                    for someVar in range(i + 1):
                         toStack.add_card_top(fromStack.dealBottom())
 
                     # make sure there is a visible card
@@ -148,12 +152,12 @@ def moveTableau(moveFrom, moveTo, tableau):
                     tableau[moveFrom] = fromStack
                     tableau[moveTo] = toStack
                     return(True, tableau)
-                else:
-                    print('\nInvalid Move.')
-                    return(false, tableau)
-
                 fromStack.add_card_bottom(fromStack.deal())
             else:
+                # undo deck manipulations
+                for someNum in range(i - 1):
+                    fromStack.add_card_bottom(fromStack.dealBottom())
+
                 print('\nInvalid Move.')
                 return(False, tableau)
 
