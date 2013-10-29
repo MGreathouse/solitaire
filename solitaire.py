@@ -50,7 +50,7 @@ def displayStatus(stock, tableau, foundation):
 
         # in case it is empty:
         if stack.empty():
-            dispTxt += 'Empty'
+            dispTxt += ')\tEmpty'
 
     print(dispTxt)
 
@@ -110,6 +110,34 @@ def moveTableau(moveFrom, moveTo, tableau):
     receiver = toStack.top()
 
     previous = None
+    iterator = 0
+
+    # move as much of stack as possible if the receiving pile is empty
+    if toStack.empty() and not fromStack.empty():
+        # first card can always go to the stack
+        fromStack.add_card_bottom(fromStack.deal())
+        previous = fromStack.bottom()
+
+        for card in range(fromStack.cards_left()):
+            iterator += 1
+
+            if checkNext(previous, fromStack.top()):
+                fromStack.add_card_bottom(fromStack.deal())
+                previous = fromStack.bottom()
+            else:
+                for i in range(iterator):
+                    toStack.add_card_top(fromStack.dealBottom())
+
+                # make sure there is a visible card
+                if not fromStack.empty():
+                    if fromStack.top().get_hidden():
+                        fromStack.top().set_hidden(False)
+
+                # return the value
+                tableau[moveFrom] = fromStack
+                tableau[moveTo] = toStack
+                return(True, tableau)
+
     for i in range(fromStack.cards_left()):
         if previous == None:
             if checkNext(fromStack.top(), receiver):
@@ -147,6 +175,9 @@ def moveTableau(moveFrom, moveTo, tableau):
                     tableau[moveFrom] = fromStack
                     tableau[moveTo] = toStack
                     return(True, tableau)
+
+                #for if the card is not the next in line for the receiving stack
+                previous = fromStack.top()
                 fromStack.add_card_bottom(fromStack.deal())
             else:
                 for someNum in range(i):
@@ -251,6 +282,16 @@ def main():
     running = True
     while running:
         running, stock, tableau, foundation = runUI(stock, tableau, foundation)
+
+        # check to see if it should keep running by seeing if any stacks in tableau have a card
+        running = False
+        for stack in tableau:
+            if not stack.empty():
+                running = True
+
+    print('\nCongratulations,\nAnyone willing to play an entire game of solitaire like this\n' +_
+        'has my respect for their lack of a graphics card and\n' +_
+        'a copy of pretty much any version of Windows or the internet.\n\nBy the way, I guess you win.')
 
 
 if __name__ == '__main__':
